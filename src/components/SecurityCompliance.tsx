@@ -21,7 +21,7 @@ const SecurityCompliance: React.FC = () => {
         </div>
 
         <div className={`grid grid-2 ${styles.guaranteesGrid}`}>
-          {t.security.guarantees.map((guarantee, index) => {
+          {t.security.guarantees.map((guarantee: any, index: number) => {
             const Icon = icons[index];
             return (
               <div key={index} className={`card ${styles.guaranteeCard}`}>

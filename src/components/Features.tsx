@@ -16,7 +16,7 @@ const Features: React.FC = () => {
         </div>
 
         <div className={`grid grid-2 ${styles.featuresGrid}`}>
-          {t.features.items.map((feature, index) => {
+          {t.features.items.map((feature: any, index: number) => {
             const Icon = icons[index];
             return (
               <div key={index} className={`card ${styles.featureCard}`}>

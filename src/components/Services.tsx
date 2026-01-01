@@ -48,7 +48,7 @@ const Services: React.FC = () => {
         </div>
 
         <div className={`grid grid-3 ${styles.servicesGrid}`}>
-          {t.services.items.map((service, index) => {
+          {t.services.items.map((service: any, index: number) => {
             const Icon = icons[index];
             const slug = serviceSlugs[index];
             return (

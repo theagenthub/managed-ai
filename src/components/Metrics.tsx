@@ -12,7 +12,7 @@ const Metrics: React.FC = () => {
           <h2>{t.metrics.title}</h2>
         </div>
         <div className={styles.metricsGrid}>
-          {t.metrics.items.map((metric, index) => (
+          {t.metrics.items.map((metric: any, index: number) => (
             <div key={index} className={styles.metricCard}>
               <div className={styles.metricValue}>{metric.value}</div>
               <div className={styles.metricLabel}>{metric.label}</div>

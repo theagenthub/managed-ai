@@ -52,7 +52,7 @@ const ServiceDetail: React.FC = () => {
         <section className={styles.useCases}>
           <h2>{t.services.detailPage.useCases}</h2>
           <div className={styles.useCasesGrid}>
-            {serviceDetail.useCases.map((useCase, index) => (
+            {serviceDetail.useCases.map((useCase: any, index: number) => (
               <div key={index} className={styles.useCaseCard}>
                 <h3>{useCase.title}</h3>
                 <p>{useCase.description}</p>
@@ -64,7 +64,7 @@ const ServiceDetail: React.FC = () => {
         <section className={styles.benefits}>
           <h2>{t.services.detailPage.keyBenefits}</h2>
           <div className={styles.benefitsList}>
-            {serviceDetail.benefits.map((benefit, index) => (
+            {serviceDetail.benefits.map((benefit: any, index: number) => (
               <div key={index} className={styles.benefitItem}>
                 <FaCheckCircle className={styles.checkIcon} />
                 <span>{benefit}</span>

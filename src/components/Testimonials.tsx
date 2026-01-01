@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
           <h2>{t.testimonials.title}</h2>
         </div>
         <div className={`grid grid-3 ${styles.testimonialsGrid}`}>
-          {t.testimonials.items.map((testimonial, index) => (
+          {t.testimonials.items.map((testimonial: any, index: number) => (
             <div key={index} className={`card ${styles.testimonialCard}`}>
               <div className={styles.quoteIcon}>
                 <FaQuoteLeft />
