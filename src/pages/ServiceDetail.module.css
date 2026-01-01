@@ -1,0 +1,219 @@
+.serviceDetail {
+  padding: var(--spacing-2xl) 0;
+  min-height: 80vh;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+  transition: var(--transition);
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+  gap: var(--spacing-md);
+}
+
+.header {
+  margin-bottom: var(--spacing-2xl);
+  max-width: 900px;
+}
+
+.header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.overview {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  max-width: 800px;
+  margin-bottom: var(--spacing-md);
+}
+
+.detailedDescription {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 900px;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.useCases {
+  margin: var(--spacing-2xl) 0;
+}
+
+.useCases h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.useCasesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.useCaseCard {
+  background: white;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  transition: var(--transition);
+}
+
+.useCaseCard:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.useCaseCard h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.useCaseCard p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.benefits {
+  margin: var(--spacing-2xl) 0;
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-lg);
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.benefitsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--border-radius);
+}
+
+.checkIcon {
+  color: var(--color-success);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefitItem span {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.howItWorks {
+  margin: var(--spacing-2xl) 0;
+  padding: var(--spacing-2xl);
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius-lg);
+}
+
+.howItWorks h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.howItWorksText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  max-width: 900px;
+  margin: 0;
+}
+
+.cta {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  border-radius: var(--border-radius-lg);
+  color: white;
+  margin-top: var(--spacing-2xl);
+}
+
+.cta h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.cta .btn {
+  background-color: white;
+  color: var(--color-primary);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: 1.125rem;
+}
+
+.cta .btn:hover {
+  background-color: var(--color-bg-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .serviceDetail {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .useCasesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefitsList {
+    grid-template-columns: 1fr;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .overview {
+    font-size: 1.125rem;
+  }
+}
+

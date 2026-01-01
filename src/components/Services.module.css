@@ -1,0 +1,78 @@
+.servicesGrid {
+  margin-top: var(--spacing-xl);
+}
+
+.serviceCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.serviceCardLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.serviceCardLink:hover {
+  text-decoration: none;
+}
+
+.readMore {
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  color: var(--color-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  transition: var(--transition);
+}
+
+.serviceCardLink:hover .readMore {
+  gap: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.iconWrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--border-radius-lg);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.serviceCard h3 {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+}
+
+.serviceCard p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .iconWrapper {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .icon {
+    font-size: 2rem;
+  }
+}
+

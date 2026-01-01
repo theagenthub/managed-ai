@@ -1,0 +1,86 @@
+.security {
+  background-color: var(--color-bg-light);
+}
+
+.warningBox {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[dir="rtl"] .warningBox {
+  border-left: none;
+  border-right: 4px solid var(--color-accent);
+}
+
+.warningText {
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0;
+  text-align: center;
+}
+
+.guaranteesGrid {
+  margin-top: var(--spacing-xl);
+}
+
+.guaranteeCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.guaranteeCard h3 {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+}
+
+.guaranteeCard p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .warningBox {
+    padding: var(--spacing-md);
+  }
+  
+  .warningText {
+    font-size: 1rem;
+  }
+  
+  .iconWrapper {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+

@@ -1,0 +1,78 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { 
+  FaBrain, 
+  FaChartLine, 
+  FaSearch, 
+  FaRobot,
+  FaFileAlt,
+  FaGavel,
+  FaTools, 
+  FaBalanceScale,
+  FaArrowRight
+} from 'react-icons/fa';
+import styles from './Services.module.css';
+
+const Services: React.FC = () => {
+  const { t } = useLanguage();
+
+  const icons = [
+    FaBrain,           // Private LLM Access
+    FaChartLine,       // Observability & Governance
+    FaSearch,          // Private RAG System
+    FaRobot,           // Custom Agent Development
+    FaFileAlt,         // Deep Document Research
+    FaGavel,           // Litigation Recommendations
+    FaTools,           // Proprietary Tools
+    FaBalanceScale     // Local Law Integration
+  ];
+
+  const serviceSlugs = [
+    'private-llm',
+    'observability',
+    'private-rag',
+    'custom-agents',
+    'deep-research',
+    'litigation',
+    'proprietary-tools',
+    'local-law',
+  ];
+
+  return (
+    <section id="services" className="section">
+      <div className="container">
+        <div className="section-title">
+          <h2>{t.services.title}</h2>
+          <p className="section-subtitle">{t.services.subtitle}</p>
+        </div>
+
+        <div className={`grid grid-3 ${styles.servicesGrid}`}>
+          {t.services.items.map((service, index) => {
+            const Icon = icons[index];
+            const slug = serviceSlugs[index];
+            return (
+              <Link 
+                key={index} 
+                to={`/service/${slug}`}
+                className={`card ${styles.serviceCard} ${styles.serviceCardLink}`}
+              >
+                <div className={styles.iconWrapper}>
+                  <Icon className={styles.icon} />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <div className={styles.readMore}>
+                  Learn More <FaArrowRight />
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
+
